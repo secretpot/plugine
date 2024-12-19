@@ -8,5 +8,6 @@ type Const struct {
 type Plugin struct {
 	Before func()
 	After func()
+	Callback func()
 	Const
 }
