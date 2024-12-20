@@ -44,11 +44,3 @@ func (b *BasePlugin) SetSettings(settings interface{}) {
 func (b *BasePlugin) Before() error   { return nil }
 func (b *BasePlugin) After() error    { return nil }
 func (b *BasePlugin) Callback() error { return nil }
-
-// NewBasePlugin 创建一个新的基础插件实例
-func NewBasePlugin(name string, settings interface{}) *BasePlugin {
-	return &BasePlugin{
-		name:     name,
-		settings: settings,
-	}
-}
