@@ -6,8 +6,8 @@ type Const struct {
 }
 
 type Plugin struct {
-	Before func()
-	After func()
-	Callback func()
+	Before func() error
+	After func() error
+	Callback func() error
 	Const
 }
