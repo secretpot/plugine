@@ -1,10 +1,14 @@
 package base
 
-type Plugin struct {
+type Attributes struct {
 	Name string
 	Settings interface{}
+}
 
-	Before func() error
-	After func() error
-	Callback func() error
+type Plugin interface {
+	Attributes
+
+	Before() error
+	After() error 
+	Callback() error
 }
